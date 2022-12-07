@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --orange: #FF6B00;
+    --background: #F5F5F5;
+    --main-font: #262626; 
+    --secondary-font: #373737;
+    --margin: clamp(10px, 10vw, 150px)
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+}
+
+.frontpage{
+    font-size: 30px;
+    color: var(--main-font);
+    margin-left: var(--margin);
+    margin-top: 150px;
+    white-space: nowrap;
+}
+
+.frontpage h3{
+    font-weight: 500;
+    font-size: clamp(1.25rem, 3vw, 2.75rem);
+}
+
+
+
+/* ----orange-graphic---- */
+
+.background{
+    background-color: var(--orange);
+    height: 1500px;
+    width: 1500px;
+    position: fixed;
+    right: 75vw;
+    top: -480px;
+    transform: rotate(10deg);
+    z-index: -1;
+}
+
+
+/* ----nav-bar----- */
+
+.menu{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    margin-right: 20px;
+    list-style: none;
+}
+
+li{
+    padding: 20px;
+}
+
+li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--main-font);
+}
+
+li a:hover{
+    color: var(--orange);
+}
+
+
+
+/* ----scrolling-words-container---- */
+
+.wrapper{
+    display: flex;
+    justify-content: left;
+  }
+  
+  .scrolling-words-container{
+    display: flex;
+    align-items: center;
+    font-size: clamp(2rem, 8vw, 6.25rem);
+    font-weight: 700; 
+  }
+  
+.scrolling-words-box{
+height: clamp(4rem, 10vw, 7.25rem);
+margin: auto;
+overflow: hidden;
+font-weight: 400;
+}
+
+.scroll{
+    margin: 0px;
+    margin-left: clamp(0.1, 2.5vw, 2.25rem);
+    padding: 0;
+    animation: scrollUp 4s infinite;
+}
+
+
+.scroll-item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: clamp(3rem, 10vw, 7.25rem);
+    list-style: none; 
+    color: var(--secondary-font)
+    }
+
+  
+    
+@keyframes scrollUp{
+    0%{
+        transform: translateY(-4%);
+    }
+
+    33%{
+        transform: translateY(-27%);
+    }
+
+    66%{
+        transform: translateY(-52%);
+    }
+
+    100%{
+        transform: translateY(-79%);
+    }
+}
